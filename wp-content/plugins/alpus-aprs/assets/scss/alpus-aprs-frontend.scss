@@ -1,0 +1,190 @@
+/* AI Product Review Summary Frontend */
+.alpus-aprs-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 2em;
+    border-radius: 3px;
+
+    @media (max-width: 1024px) {
+        padding: 1.5em;
+
+        .alpus-aprs-content {
+            font-size: max(.9em, 14px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 1.2em;
+        
+        .alpus-aprs-content {
+            font-size: max(.8em, 13px);
+        }
+    }
+
+    &.loading .alpus-aprs-content {
+        display: none;
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    .alpus-aprs-title {
+        margin-bottom: 1em;
+        font-weight: 500;
+    }
+
+    .alpus-aprs-content {
+        width: 100%;
+        
+        span {
+            display: block;
+        }
+    }
+
+    .loading-overlay {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        background-color: #e1e1e1;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .loader {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        background-color: #3498db;
+        animation: alpus_spin 2s linear infinite;
+    }
+    
+    @keyframes alpus_spin {
+        0% {
+            left: -20%;
+
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    
+    .alpus-aprs-error-msg {
+        display: none;
+        padding: 10px;
+        font-size: 12px;
+        background-color: #a94442;
+        color: #fff;
+        border-radius: 3px;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .alpus-aprs-summary-label,
+    .alpus-aprs-pros-label,
+    .alpus-aprs-cons-label {
+        font-weight: 500;
+        font-size: 14px;
+        color: #222529;
+    }
+
+    .alpus-aprs-sp-tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        padding-left: 0;
+
+        .alpus-aprs-sp-tag {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 6px 8px;
+            border-radius: 3px;
+            background-color: #caeed4;
+            // border: 1px solid #008164;
+            color: #222529;
+            font-weight: 600;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                background: url(../images/check.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+
+/* Alpus APRS Shop Tag Filter */
+.alpus-aprs-shop-filters-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    .alpus-aprs-shop-filters {
+        flex: 1;
+    }
+
+    .alpus-aprs-shop-filters-clear {
+        margin-top: 10px;
+        line-height: 1;
+        color: #000;
+        text-decoration: underline;
+    }
+}
+.alpus-aprs-shop-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .alpus-aprs-shop-filter {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        padding: 6px 10px;
+        border-radius: 3px;
+        background-color: #f2f3f5;
+        color: #222529;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover,
+        &.active {
+            background-color: #caeed4;
+        }
+        
+        > a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &.active {
+            background-color: #caeed4;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                background: url(../images/check.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}

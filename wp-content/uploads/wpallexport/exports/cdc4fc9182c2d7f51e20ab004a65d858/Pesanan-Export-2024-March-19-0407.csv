@@ -1,0 +1,3 @@
+﻿"Order Date","Order ID","Order Key","Billing First Name","Billing Last Name",Title,"Order Status","Order Total"
+2018-07-23,1560,wc_order_5b55972594bad,faf,f,"Order - July 23, 2018 @ 08:51 AM",wc-refunded,304.00
+2018-11-21,1650,wc_order_5bf54f954ba90,alex,p,"Order - November 21, 2018 @ 12:29 PM",wc-refunded,598.00
